@@ -1,4 +1,4 @@
-var rope, bob1, bob2, bob3, bob4, bob5, roof, rope;
+var bob1, bob2, bob3, bob4, bob5, roof, rope1, rope2;
 const Engine = Matter.Engine;
 const World = Matter.World;
 const Bodies = Matter.Bodies;
@@ -22,8 +22,8 @@ function setup() {
     //bob3 = new Bob(300, 450, 30);
     //bob4 = new Bob(350, 450, 30);
     //bob5 = new Bob(400, 450, 30);
-  rope = new Rope(roof.Body, bob1.body);
-  rope = new Rope(roof.body, bob2.body);
+  rope1 = new Rope(roof.Body, bob1.body, 50, 50);
+  //rope2 = new Rope(roof.body, bob2.body, 100, 100);
 
 	//Create the Bodies Here.
 
@@ -40,6 +40,8 @@ function draw() {
   roof.display();
   bob1.display();
   bob2.display();
+  rope1.display();
+  //rope2.display();
   //bob3.display();
   //bob4.display();
   //bob5.display();
